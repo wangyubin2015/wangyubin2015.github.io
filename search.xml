@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[windows环境下使用hexo搭建blog平台]]></title>
+      <url>/2017/03/17/windows-establish-blog/</url>
+      <content type="html"><![CDATA[<p>之前已经出过几期搭建 <code>hexo</code> 的文章，但是有不少朋友私信说系统是windows的，希望出一期windows环境下的hexo搭建文章。</p>
+<p>为此，确保可用性，笔者在linux（笔者的系统环境）环境下安装了windows虚拟机重新演练了一边，确保没有什么漏洞，才写下了此文。</p>
+<p>本文会非常详细，以确保没有计算机背景的小白也可以轻松上手</p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>1).下载：从官网下载windows版本的git,地址在下方。<br><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a><br>2).安装：双击安装，一直点击下一步即可</p>
+<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>1).下载：从官网下载windows版本的node.js安装包（.msi后缀），地址下方<br><a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/</a><br>2).安装：双击安装，一直点击下一步即可</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>在任意目录如桌面，点击鼠标右键，选择Git Bash Here这一项，打开git bash命令框（前提是git安装成功），如下图<br><img src="http://oncj6b2vl.bkt.clouddn.com/FraxkCebAzx-dlPGsUmgcLZRR_Lj.png" alt="鼠标右键"><br>在打开的命令窗内输入下面的命令进行安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
+<p>安装过后，输入 <code>hexo -v</code>，出现下面信息，则表示安装成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -v</span><br><span class="line">hexo-cli: 1.0.2</span><br><span class="line">os: Windows_NT 6.1.7601 win32 x64</span><br><span class="line">http_parser: 2.7.0</span><br><span class="line">node: 6.10.0</span><br><span class="line">v8: 5.1.281.93</span><br><span class="line">uv: 1.9.1</span><br><span class="line">zlib: 1.2.8</span><br><span class="line">ares: 1.10.1-DEV</span><br><span class="line">icu: 58.2</span><br><span class="line">modules: 48</span><br><span class="line">openssl: 1.0.2k</span><br></pre></td></tr></table></figure></p>
+<h2 id="初始化blog"><a href="#初始化blog" class="headerlink" title="初始化blog"></a>初始化blog</h2><p>进入准备创建blog的目录，同样点击鼠标右键，打开git bash命令框，<br>执行一下命令进行初始化<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init myblog</span><br></pre></td></tr></table></figure></p>
+<p>就会自动创建一个名字为myblog目录，这时本地blog就已经创建好了。<br>进入blog目录，启动 blog<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> myblog</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
+<p>在浏览器输入 <code>127.0.0.1:4000</code>就可以访问到刚刚创建好的blog了。</p>
+<h2 id="换皮肤"><a href="#换皮肤" class="headerlink" title="换皮肤"></a>换皮肤</h2><p>如果觉的自带的皮肤太难看。可以根据以下步奏更换皮肤<br>在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官网</a> 可以查看各种各样的皮肤，挑选自己喜欢的皮肤</p>
+<p>这里以 <code>3-hexo</code> 这款皮肤为例（这款皮肤是笔者写的，效果可查看 <a href="http://yelog.org/" target="_blank" rel="noopener">yelog.org</a>）<br>1）进入皮肤的 <code>github</code> 官网，如<a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a>的网址<br>找到 <code>clone or download</code> ,复制它的url：<a href="https://github.com/yelog/hexo-theme-3-hexo.git" target="_blank" rel="noopener">https://github.com/yelog/hexo-theme-3-hexo.git</a></p>
+<p>2）进入 <code>myblog</code> 目录，打开 <code>git bash</code> 命令框，执行以下命令将皮肤下载到themes目录下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo</span><br></pre></td></tr></table></figure></p>
+<p>3) 修改 <code>myblog/_config.yml</code> 中的 <code>theme: landscape</code> 为 <code>theme: 3-hexo</code></p>
+<blockquote>
+<p>如果使用 <code>3-hexo</code> 主题的话，还需要注意两点<br>①因为主题使用了自己的高亮效果，还需要修改 <code>highlight enable: true</code> 的 <code>true</code> 改为 <code>false</code>。<br>②由于主题启用了文章字数统计功能，需要安装一个插件，在 <code>myblog</code> 目录下，打开 <code>git bash</code> 命令框，执行 <code>npm i --save hexo-wordcount</code> 即可</p>
+</blockquote>
+<p>4) 重新渲染，启动服务器<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></p>
+<p>5) 打开浏览器查看效果，换肤成功</p>
+<h2 id="如何写文章"><a href="#如何写文章" class="headerlink" title="如何写文章"></a>如何写文章</h2><p>文章在 <code>myblog/source/_posts/</code> 下，以markdown格式写成，笔者推荐使用<code>atom</code>作为写作工具。<br>可以通过 <code>hexo new 文章名</code> 来创建一篇文章，当然也可以直接在 <code>_posts</code> 目录下直接新建.md文件。<br>执行命令 仍是在 <code>myblog</code> 目录下，打开 <code>git bash</code> 命令框。以下是常用命令，其他可以查阅官网。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个标题为“git教程”的文章</span></span><br><span class="line">$ hexo new <span class="string">"git教程"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 清除所有渲染的页面</span></span><br><span class="line">$ hexo clean</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将markdown渲染成页面</span></span><br><span class="line">$ hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动hexo</span></span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure></p>
+<h2 id="发布到网上"><a href="#发布到网上" class="headerlink" title="发布到网上"></a>发布到网上</h2><p>如果想要在github上搭建blog，或者在自己的购买的服务器上搭建blog<br>可以查看笔者的往期文章</p>
+<p>今天的教程就到这里，有什么问题可以在评论区交流。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 工具 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo加入字数统计WordCount]]></title>
+      <url>/2017/03/09/WordCount/</url>
+      <content type="html"><![CDATA[<p>只需要安装一个插件 WordCount</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>单篇文章字数<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%=wordcount(post.content)</span> %&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>所有文章的总字数<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%=totalcount(site)</span> %&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2><p>2017年3月9日，给3-hexo添加字数统计功能</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 工具 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
